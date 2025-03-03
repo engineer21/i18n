@@ -304,7 +304,7 @@ function TJalaliCalendar.IsLeapYear(Era, Year: Integer): Boolean;
 begin
   Year := ConvertYear(Year, Era, HijriEra);
   Year := ToZeroBase(HijriEra, Year);
-  Result := ((((Modulus(Year - 474, 2820) + 474) + 38) * 682) mod 2816) < 682;
+  Result := ((((Modulus(Year - 474, 2820) + 474) + 100) * 682) mod 2816) < 682;
 end;
 
 function TJalaliCalendar.DaysInYear(Era, Year: Integer): Integer;
